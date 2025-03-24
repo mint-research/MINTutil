@@ -1,0 +1,30 @@
+{
+    "GitSettings": {
+        "DefaultBranch": "main",
+        "CommitMessageTemplate": "[{type}] {message}",
+        "CommitTypes": [
+            "feat",
+            "fix",
+            "docs",
+            "style",
+            "refactor",
+            "test",
+            "chore"
+        ],
+        "AutoRebase": true,
+        "AutoMerge": false
+    },
+    "Schedule": {
+        "EventDriven": true,
+        "PollingInterval": "60s",
+        "HookIntegration": true,
+        "BatchWindow": "5s"
+    },
+    "Interfaces": {
+        "Coder": true,
+        "Tester": true,
+        "Updater": true,
+        "Log": true,
+        "Hive": true
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "ArchiveSettings": {
+        "ArchivePath": "archives",
+        "DefaultCompression": true,
+        "DefaultEncryption": false,
+        "MaxArchiveSize": 1073741824,
+        "AutoCleanup": false,
+        "CleanupAge": 365
+    },
+    "VersionSettings": {
+        "EnableVersioning": true,
+        "MaxVersions": 10,
+        "VersionNamingPattern": "{name}-{version}",
+        "AutoPurgeOldVersions": true
+    },
+    "CompressionSettings": {
+        "CompressionLevel": "Optimal",
+        "CompressionAlgorithm": "Deflate",
+        "ExcludeExtensions": [
+            ".zip",
+            ".rar",
+            ".7z",
+            ".gz"
+        ]
+    },
+    "EncryptionSettings": {
+        "EncryptionAlgorithm": "AES",
+        "KeySize": 256,
+        "KeyPath": "keys",
+        "PasswordProtected": true
+    },
+    "StorageSettings": {
+        "StorageType": "Local",
+        "RemotePath": "",
+        "Credentials": "",
+        "ConnectionTimeout": 30,
+        "RetryCount": 3
+    },
+    "IntegrationSettings": {
+        "EnableHiveIntegration": true,
+        "EnableLoggerIntegration": true,
+        "EnableManagerIntegration": true,
+        "HiveUpdateInterval": 60
+    }
+}

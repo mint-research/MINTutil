@@ -1,0 +1,73 @@
+{
+    "AgentCapabilities": {
+        "MINTYmanager": [
+            "ProjectManagement",
+            "TaskTracking",
+            "Roadmapping",
+            "Backlog",
+            "CapabilityChecking"
+        ],
+        "MINTYarchitect": [
+            "SystemDesign",
+            "ArchitectureReview",
+            "TechnicalPlanning",
+            "DesignPatterns"
+        ],
+        "MINTYcoder": [
+            "CodeGeneration",
+            "CodeReview",
+            "Refactoring",
+            "Debugging",
+            "PowerShell",
+            "Scripting"
+        ],
+        "MINTYtester": [
+            "UnitTesting",
+            "IntegrationTesting",
+            "TestAutomation",
+            "QualityAssurance"
+        ],
+        "MINTYarchivar": [
+            "DataArchiving",
+            "VersionHistory",
+            "DataRetention"
+        ],
+        "MINTYcache": [
+            "CacheManagement",
+            "MemoryOptimization",
+            "DataCaching"
+        ],
+        "MINTYlogger": [
+            "Logging",
+            "LogAnalysis",
+            "ErrorTracking",
+            "AuditTrail"
+        ],
+        "MINTYcleaner": [
+            "SystemCleaning",
+            "TempFileCleaning",
+            "ResourceOptimization"
+        ],
+        "MINTYupdater": [
+            "SystemUpdates",
+            "ModuleUpdates",
+            "UpdateManagement"
+        ],
+        "MINTYgit": [
+            "VersionControl",
+            "ReleaseManagement",
+            "ChangeTracking"
+        ]
+    },
+    "GlobalCapabilities": [
+        "PowerShell",
+        "Scripting",
+        "FileManagement",
+        "LogManagement",
+        "ConfigurationManagement",
+        "ErrorHandling",
+        "Logging",
+        "Monitoring"
+    ],
+    "LastUpdated": "2025-03-24T22:34:00.000Z"
+}

@@ -11,6 +11,16 @@ $script:SystemInfoUI = $null
 
 # ============= Initialisierungsfunktionen =============
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Initialize-M02_systeminfo.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Initialize-M02_systeminfo.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Initialize-M02_systeminfo -Parameter1 Wert
+#>
 function Initialize-M02_systeminfo {
     param(
         [Parameter(Mandatory=$true)]$Window
@@ -41,6 +51,16 @@ function Initialize-M02_systeminfo {
     }
 }
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Register-EventHandlers.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Register-EventHandlers.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Register-EventHandlers -Parameter1 Wert
+#>
 function Register-EventHandlers {
     try {
         # Button-Event-Handler registrieren
@@ -61,6 +81,16 @@ function Register-EventHandlers {
 
 # ============= Datenfunktionen =============
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Load-SystemData.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Load-SystemData.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Load-SystemData -Parameter1 Wert
+#>
 function Load-SystemData {
     try {
         # Prüfen, ob Cache existiert und aktuell ist
@@ -96,6 +126,16 @@ function Load-SystemData {
     }
 }
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Refresh-SystemData.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Refresh-SystemData.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Refresh-SystemData -Parameter1 Wert
+#>
 function Refresh-SystemData {
     try {
         # Daten neu sammeln
@@ -125,6 +165,16 @@ function Refresh-SystemData {
     }
 }
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Collect-SystemData.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Collect-SystemData.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Collect-SystemData -Parameter1 Wert
+#>
 function Collect-SystemData {
     try {
         # Ergebnisobjekt initialisieren
@@ -251,6 +301,16 @@ function Collect-SystemData {
     }
 }
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Add-ToSystemHistory.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Add-ToSystemHistory.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Add-ToSystemHistory -Parameter1 Wert
+#>
 function Add-ToSystemHistory {
     param(
         [Parameter(Mandatory=$true)]$SystemData
@@ -293,6 +353,16 @@ function Add-ToSystemHistory {
     }
 }
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Show-SystemHistory.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Show-SystemHistory.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Show-SystemHistory -Parameter1 Wert
+#>
 function Show-SystemHistory {
     try {
         # Verlaufsdaten laden
@@ -380,6 +450,16 @@ function Show-SystemHistory {
     }
 }
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Export-SystemReport.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Export-SystemReport.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Export-SystemReport -Parameter1 Wert
+#>
 function Export-SystemReport {
     try {
         # Aktuelle Daten sammeln
@@ -416,6 +496,16 @@ function Export-SystemReport {
 
 # ============= UI-Funktionen =============
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Update-SystemInfoUI.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Update-SystemInfoUI.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Update-SystemInfoUI -Parameter1 Wert
+#>
 function Update-SystemInfoUI {
     param(
         [Parameter(Mandatory=$true)]$SystemData
@@ -481,3 +571,11 @@ function Update-SystemInfoUI {
 
 # Exportiere die Initialisierungsfunktion für main.ps1
 Export-ModuleMember -Function Initialize-M02_systeminfo
+
+
+
+
+
+
+
+

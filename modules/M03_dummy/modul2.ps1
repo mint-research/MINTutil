@@ -9,6 +9,16 @@ $script:M03_dummyUI = $null
 
 # ============= Initialisierungsfunktionen =============
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Initialize-M03_dummy.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Initialize-M03_dummy.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Initialize-M03_dummy -Parameter1 Wert
+#>
 function Initialize-M03_dummy {
     param(
         [Parameter(Mandatory=$true)]$Window
@@ -55,6 +65,16 @@ function Initialize-M03_dummy {
     }
 }
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Register-EventHandlers.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Register-EventHandlers.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Register-EventHandlers -Parameter1 Wert
+#>
 function Register-EventHandlers {
     try {
         # Benachrichtigungsbutton
@@ -73,6 +93,16 @@ function Register-EventHandlers {
 
 # ============= Funktionalität =============
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Register-Notification.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Register-Notification.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Register-Notification -Parameter1 Wert
+#>
 function Register-Notification {
     try {
         # InputBox für E-Mail anzeigen
@@ -116,7 +146,7 @@ function Register-Notification {
                 RegisteredDate = (Get-Date -Format "yyyy-MM-ddTHH:mm:ss")
             }
             
-            $notifications += $newNotification
+            $null = $notifications.Add($newNotification)
             $notifications | ConvertTo-Json | Set-Content -Path $script:NotificationsPath -Force
             
             [System.Windows.MessageBox]::Show(
@@ -141,6 +171,16 @@ function Register-Notification {
     }
 }
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Show-InputDialog.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Show-InputDialog.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Show-InputDialog -Parameter1 Wert
+#>
 function Show-InputDialog {
     param(
         [string]$Title = "Eingabe",
@@ -217,3 +257,8 @@ function Show-InputDialog {
 
 # Exportiere die Initialisierungsfunktion für main.ps1
 Export-ModuleMember -Function Initialize-M03_dummy
+
+
+
+
+

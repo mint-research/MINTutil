@@ -1,0 +1,7 @@
+{
+    "VSCodePath": "C:\\Program Files\\Microsoft VS Code\\Code.exe",
+    "GitPath": "git",
+    "CheckInterval": 60,
+    "MaxRetries": 3,
+    "Timeout": 30
+}

@@ -1,0 +1,67 @@
+{
+    "ScanSettings": {
+        "MaxDepth": 10,
+        "ExcludeDirs": [
+            "node_modules",
+            ".git",
+            "bin",
+            "obj",
+            "dist",
+            "build"
+        ],
+        "IncludeExtensions": [
+            ".ps1",
+            ".psm1",
+            ".psd1",
+            ".js",
+            ".ts",
+            ".jsx",
+            ".tsx",
+            ".cs",
+            ".py",
+            ".java",
+            ".json",
+            ".xml",
+            ".yaml",
+            ".yml"
+        ],
+        "ScanInterval": 3600,
+        "EnableAutoScan": true
+    },
+    "ParserSettings": {
+        "MaxFileSize": 1048576,
+        "EnableSemanticAnalysis": true,
+        "EnableDependencyTracking": true,
+        "EnableFunctionExtraction": true,
+        "EnableClassExtraction": true,
+        "EnableVariableTracking": true
+    },
+    "ContextSettings": {
+        "MaxContextSize": 8192,
+        "PrioritizeRecentFiles": true,
+        "PrioritizeActiveFiles": true,
+        "PrioritizeDependencies": true,
+        "ContextOptimizationStrategy": "TokenEfficiency",
+        "EnableContextCompression": true
+    },
+    "MCPSettings": {
+        "Port": 8080,
+        "Host": "localhost",
+        "EnableMCP": true,
+        "MaxConcurrentRequests": 10,
+        "RequestTimeout": 30000
+    },
+    "StorageSettings": {
+        "CachePath": "data",
+        "MaxCacheSize": 1073741824,
+        "EnablePersistence": true,
+        "PersistenceInterval": 300,
+        "EnableCompression": true
+    },
+    "IntegrationSettings": {
+        "EnableHiveIntegration": true,
+        "EnableLoggerIntegration": true,
+        "EnableManagerIntegration": true,
+        "HiveUpdateInterval": 60
+    }
+}

@@ -10,7 +10,6 @@
 #>
 
 param (
-    [switch]$Validate = $false,  # Validierung der Modulstruktur vor dem Start
     [string]$ModulePath = $null  # Direktes Laden eines bestimmten Moduls, falls angegeben
 )
 
@@ -38,6 +37,16 @@ $script:RegistryBasePath = "HKCU:\Software\MINTutil"
 
 # ============= Hilfsfunktionen =============
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Initialize-RegistryStore.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Initialize-RegistryStore.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Initialize-RegistryStore -Parameter1 Wert
+#>
 function Initialize-RegistryStore {
     # Erstellt den Registry-Pfad für MINTutil falls nicht vorhanden
     if (-not (Test-Path -Path $script:RegistryBasePath)) {
@@ -46,6 +55,16 @@ function Initialize-RegistryStore {
     }
 }
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Get-RegistrySetting.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Get-RegistrySetting.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Get-RegistrySetting -Parameter1 Wert
+#>
 function Get-RegistrySetting {
     param (
         [Parameter(Mandatory=$true)][string]$Name,
@@ -64,6 +83,16 @@ function Get-RegistrySetting {
     return $DefaultValue
 }
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Set-RegistrySetting.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Set-RegistrySetting.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Set-RegistrySetting -Parameter1 Wert
+#>
 function Set-RegistrySetting {
     param (
         [Parameter(Mandatory=$true)][string]$Name,
@@ -114,6 +143,16 @@ function Write-StatusMessage {
     }
 }
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Load-GlobalConfig.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Load-GlobalConfig.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Load-GlobalConfig -Parameter1 Wert
+#>
 function Load-GlobalConfig {
     try {
         # Prüfen, ob globale Konfigurationsdatei existiert
@@ -136,6 +175,16 @@ function Load-GlobalConfig {
     }
 }
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Load-Theme.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Load-Theme.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Load-Theme -Parameter1 Wert
+#>
 function Load-Theme {
     param(
         [Parameter(Mandatory=$true)][string]$ThemeName
@@ -174,6 +223,16 @@ function Load-Theme {
     }
 }
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Scan-Modules.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Scan-Modules.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Scan-Modules -Parameter1 Wert
+#>
 function Scan-Modules {
     try {
         $modules = @{}
@@ -330,6 +389,16 @@ function Create-MainWindow {
     }
 }
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Load-ModuleUI.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Load-ModuleUI.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Load-ModuleUI -Parameter1 Wert
+#>
 function Load-ModuleUI {
     param(
         [Parameter(Mandatory=$true)][string]$ModuleName
@@ -386,6 +455,16 @@ function Load-ModuleUI {
     }
 }
 
+<#
+.SYNOPSIS
+    Kurzbeschreibung der Funktion Start-MINTutil.
+.DESCRIPTION
+    Detaillierte Beschreibung der Funktion Start-MINTutil.
+.PARAMETER Parameter1
+    Beschreibung des ersten Parameters.
+.EXAMPLE
+    Start-MINTutil -Parameter1 Wert
+#>
 function Start-MINTutil {
     try {
         # Registry-Speicher initialisieren
@@ -428,11 +507,6 @@ function Start-MINTutil {
 
 # ============= Hauptprogramm =============
 
-# Wenn Validierung angefordert wurde, diese ausführen
-if ($Validate) {
-    & "$script:BasePath\validate_mintutil.ps1" -BasePath $script:BasePath
-}
-
 # Wenn ein spezifisches Modul angefordert wurde, nur dieses laden
 if ($ModulePath) {
     if (Test-Path -Path $ModulePath) {
@@ -444,3 +518,12 @@ if ($ModulePath) {
     # Normaler Programmstart
     Start-MINTutil
 }
+
+
+
+
+
+
+
+
+

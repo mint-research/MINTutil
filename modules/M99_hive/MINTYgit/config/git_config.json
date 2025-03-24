@@ -1,0 +1,59 @@
+{
+    "RepositorySettings": {
+        "DefaultBranch": "main",
+        "RemoteUrl": "",
+        "LocalPath": "",
+        "AutoCommit": true,
+        "AutoPush": false
+    },
+    "BranchSettings": {
+        "NamingConvention": "feature/{name}",
+        "RequireDescription": true,
+        "RequireIssueReference": true
+    },
+    "CommitSettings": {
+        "MessageTemplate": "[{type}] {message}",
+        "CommitTypes": [
+            "feat",
+            "fix",
+            "docs",
+            "style",
+            "refactor",
+            "test",
+            "chore"
+        ],
+        "AutoCommitInterval": "15m",
+        "MinChangesForCommit": 3,
+        "GroupSimilarChanges": true,
+        "IncludeFileList": true,
+        "MaxFilesInMessage": 5
+    },
+    "MergeSettings": {
+        "RequireReview": true,
+        "AutoResolveConflicts": false,
+        "PreferSource": false,
+        "PreferTarget": false
+    },
+    "HistorySettings": {
+        "MaxHistoryDepth": 100,
+        "IncludeCommitMessages": true,
+        "IncludeFileChanges": true,
+        "IncludeAuthors": true
+    },
+    "VSCodeSettings": {
+        "EnableExtension": true,
+        "CommitOnSave": true,
+        "ShowNotifications": true,
+        "StatusBarIntegration": true,
+        "AutoCommitDelay": "30s",
+        "SuggestCommitMessages": true
+    },
+    "IntegrationSettings": {
+        "EnableHiveIntegration": true,
+        "EnableLoggerIntegration": true,
+        "EnableManagerIntegration": true,
+        "EnableCoderIntegration": true,
+        "EnableTesterIntegration": true,
+        "HiveUpdateInterval": 60
+    }
+}

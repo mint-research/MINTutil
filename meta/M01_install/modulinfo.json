@@ -1,0 +1,21 @@
+{
+  "name": "M01_install",
+  "description": "Modul zur Softwareinstallation, Deinstallation und Konfiguration über Winget. Unterstützt Fortschrittsanzeige, Statusleiste und dynamische App-Felder.",
+  "entry": "modules/M01_install/install.ps1",
+  "config": [
+    "config/M01_install/output.json",
+    "config/global/global.config.json"
+  ],
+  "data": [
+    "data/M01_install/apps.json"
+  ],
+  "generates": [
+    "config/M01_install/output.json"
+  ],
+  "ui": {
+    "type": "tab",
+    "dynamicFields": true,
+    "includes": ["actions", "softwarelist", "progressbar", "statusbar"]
+  },
+  "preserve": true
+}

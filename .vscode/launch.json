@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "PowerShell: MINTutil Hauptskript",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}/run_MINTutil.ps1",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "PowerShell: Static Code Review",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}/tests/static_code_review/static_code_review.ps1",
+            "args": ["-ApplyAutoCorrections", "$false"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "PowerShell: Aktuelles Skript",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${file}",
+            "cwd": "${fileDirname}"
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "Roadmap": {
+        "TimeframeMonths": 12,
+        "Categories": [
+            "Feature",
+            "Enhancement",
+            "Bugfix",
+            "Infrastructure"
+        ]
+    },
+    "Backlog": {
+        "PriorityLevels": [
+            "Critical",
+            "High",
+            "Medium",
+            "Low"
+        ],
+        "Categories": [
+            "Feature",
+            "Enhancement",
+            "Bugfix",
+            "Infrastructure"
+        ]
+    },
+    "TaskList": {
+        "StatusOptions": [
+            "Todo",
+            "InProgress",
+            "Review",
+            "Done"
+        ],
+        "Categories": [
+            "Development",
+            "Testing",
+            "Documentation",
+            "Deployment"
+        ]
+    },
+    "CapabilityChecking": {
+        "AutoCheckEnabled": true,
+        "CheckFrequency": "Daily",
+        "ProactiveDevelopment": true,
+        "UserConfirmationRequired": true
+    },
+    "Interfaces": {
+        "MINTYhive": true,
+        "AllAgents": true,
+        "MINTYlogger": true,
+        "ExternalSystems": false
+    }
+}

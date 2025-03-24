@@ -1,0 +1,47 @@
+[
+    {
+        "Id": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+        "Title": "Docker Container Deployment Integration",
+        "Description": "Implementierung einer Funktion zum Deployment von Containern über Docker",
+        "Category": "Feature",
+        "PlannedMonth": 1,
+        "RequiredCapabilities": [
+            "Docker",
+            "ContainerManagement",
+            "Deployment"
+        ],
+        "Status": "Planned",
+        "CreatedAt": "2025-03-24T22:26:00.000Z",
+        "UpdatedAt": "2025-03-24T22:37:00.000Z"
+    },
+    {
+        "Id": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
+        "Title": "Automatische Systemupdates",
+        "Description": "Implementierung einer Funktion zur automatischen Aktualisierung des Systems",
+        "Category": "Enhancement",
+        "PlannedMonth": 2,
+        "RequiredCapabilities": [
+            "SystemUpdates",
+            "AutomatedTesting",
+            "ErrorHandling"
+        ],
+        "Status": "Planned",
+        "CreatedAt": "2025-03-24T22:26:00.000Z",
+        "UpdatedAt": "2025-03-24T22:37:00.000Z"
+    },
+    {
+        "Id": "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
+        "Title": "Erweiterte Logging-Funktionen",
+        "Description": "Implementierung erweiterter Logging-Funktionen für bessere Fehlerdiagnose",
+        "Category": "Enhancement",
+        "PlannedMonth": 3,
+        "RequiredCapabilities": [
+            "Logging",
+            "LogAnalysis",
+            "ErrorTracking"
+        ],
+        "Status": "Planned",
+        "CreatedAt": "2025-03-24T22:26:00.000Z",
+        "UpdatedAt": "2025-03-24T22:37:00.000Z"
+    }
+]

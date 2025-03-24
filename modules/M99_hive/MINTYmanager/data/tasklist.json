@@ -1,0 +1,48 @@
+[
+    {
+        "Id": "7g8h9i0j-1k2l-3m4n-5o6p-7q8r9s0t1u2v",
+        "Title": "Docker-Integration für Deployment-Prozesse",
+        "Description": "Implementierung der Docker-Integration für automatisierte Deployment-Prozesse",
+        "Category": "Development",
+        "AssignedTo": "MINTYcoder",
+        "RequiredCapabilities": [
+            "Docker",
+            "ContainerManagement",
+            "Deployment",
+            "PowerShell"
+        ],
+        "Status": "Todo",
+        "CreatedAt": "2025-03-24T22:26:00.000Z",
+        "UpdatedAt": "2025-03-24T22:37:00.000Z"
+    },
+    {
+        "Id": "8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w",
+        "Title": "Entwicklung von Docker-Deployment-Tests",
+        "Description": "Entwicklung von Tests für die Docker-Deployment-Funktionalität",
+        "Category": "Testing",
+        "AssignedTo": "MINTYtester",
+        "RequiredCapabilities": [
+            "TestAutomation",
+            "Docker",
+            "ContainerManagement"
+        ],
+        "Status": "Todo",
+        "CreatedAt": "2025-03-24T22:26:00.000Z",
+        "UpdatedAt": "2025-03-24T22:37:00.000Z"
+    },
+    {
+        "Id": "9i0j1k2l-3m4n-5o6p-7q8r-9s0t1u2v3w4x",
+        "Title": "Dokumentation der Docker-Integration",
+        "Description": "Erstellung der Dokumentation für die Docker-Integration",
+        "Category": "Documentation",
+        "AssignedTo": "",
+        "RequiredCapabilities": [
+            "Documentation",
+            "Docker",
+            "TechnicalWriting"
+        ],
+        "Status": "Todo",
+        "CreatedAt": "2025-03-24T22:26:00.000Z",
+        "UpdatedAt": "2025-03-24T22:37:00.000Z"
+    }
+]

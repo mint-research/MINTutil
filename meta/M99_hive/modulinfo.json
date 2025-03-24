@@ -1,0 +1,20 @@
+{
+    "ui": {
+        "dynamicFields": true,
+        "includes": [
+            "actions",
+            "statusbar"
+        ],
+        "type": "tab"
+    },
+    "entry": "modules/M99_hive/hive.ps1",
+    "data": [],
+    "preserve": true,
+    "config": [
+        "config/M99_hive/ui.xaml",
+        "config/global/global.config.json"
+    ],
+    "name": "M99_hive",
+    "description": "Modul für KI-Agenten und MCP-Integration. Bietet eine Übersicht über die verschiedenen Agenten im Hive-System und deren Funktionen.",
+    "generates": []
+}

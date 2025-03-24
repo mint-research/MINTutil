@@ -17,24 +17,29 @@ MINTutil/
 ├── README.md                 # Diese Datei
 ├── config/                   # Konfigurationsdateien
 │   ├── global/               # Systemweite Konfigurationen
-│   ├── modul1/               # Installer-Konfiguration 
-│   └── modul2/               # Modul2-Konfiguration
+│   ├── M01_install/          # Installer-Konfiguration 
+│   ├── M02_systeminfo/       # Systeminfo-Konfiguration
+│   └── M03_dummy/            # Dummy-Modul-Konfiguration
 ├── data/                     # Datendateien
 │   ├── global/               # Globale Daten
-│   ├── modul1/               # Installer-Daten
-│   └── modul2/               # Modul2-Daten
+│   ├── M01_install/          # Installer-Daten
+│   ├── M02_systeminfo/       # Systeminfo-Daten
+│   └── M03_dummy/            # Dummy-Modul-Daten
 ├── docs/                     # Dokumentation
 │   ├── global/               # Allgemeine Dokumentation
-│   ├── modul1/               # Installer-Dokumentation
-│   └── modul2/               # Modul2-Dokumentation
+│   ├── M01_install/          # Installer-Dokumentation
+│   ├── M02_systeminfo/       # Systeminfo-Dokumentation
+│   └── M03_dummy/            # Dummy-Modul-Dokumentation
 ├── meta/                     # Metadaten
 │   ├── global/               # Globale Metadaten
-│   ├── modul1/               # Installer-Metadaten
-│   └── modul2/               # Modul2-Metadaten
+│   ├── M01_install/          # Installer-Metadaten
+│   ├── M02_systeminfo/       # Systeminfo-Metadaten
+│   └── M03_dummy/            # Dummy-Modul-Metadaten
 ├── modules/                  # PowerShell-Module
 │   ├── global/               # Kernlogik des Gesamtsystems
-│   ├── modul1/               # Installer-Kernlogik
-│   └── modul2/               # Modul2-Kernlogik
+│   ├── M01_install/          # Installer-Kernlogik
+│   ├── M02_systeminfo/       # Systeminfo-Kernlogik
+│   └── M03_dummy/            # Dummy-Modul-Kernlogik
 └── themes/                   # Designthemen
     ├── light.xaml            # Helles Design
     └── dark.xaml             # Dunkles Design
@@ -48,8 +53,23 @@ MINTutil/
 
 ## Modularität
 
-Jedes Modul in MINTutil stellt einen eigenen, unabhängigen Funktionsbereich dar und ist als separater Tab in der Benutzeroberfläche zugänglich. Die Module folgen einer einheitlichen Struktur für maximale Wartbarkeit und Erweiterbarkeit.
+Jedes Modul in MINTutil stellt einen eigenen, unabhängigen Funktionsbereich dar und ist als separater Tab in der Benutzeroberfläche zugänglich. Die Module folgen einer einheitlichen Struktur für maximale Wartbarkeit und Erweiterbarkeit:
+
+- **M01_install**: Modul zur Softwareinstallation, Deinstallation und Konfiguration über Winget
+- **M02_systeminfo**: Modul zur Anzeige und Analyse von Systeminformationen
+- **M03_dummy**: Platzhaltermodul für zukünftige Funktionalität
 
 ## Weiterentwicklung
 
 Neue Module können einfach zur bestehenden Struktur hinzugefügt werden. Folgen Sie der Anleitung in der Dokumentation unter `docs/global/neues_modul_erstellen.md`.
+
+## Standardisierte Ordnerstruktur
+
+MINTutil verwendet eine standardisierte Ordnerstruktur für alle Module:
+
+- `/data/global/` - Für globale Daten und Einstellungen
+- `/data/M01_install/` - Für Installationsdaten
+- `/data/M02_systeminfo/` - Für Systeminformationsdaten
+- `/data/M03_dummy/` - Für das Dummy-Modul
+
+Diese konsistente Struktur erleichtert die Wartung und Erweiterung des Systems.

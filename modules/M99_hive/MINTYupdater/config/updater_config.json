@@ -1,0 +1,26 @@
+{
+    "UpdateRules": {
+        "SynchronizeFormats": true,
+        "SynchronizeConventions": true,
+        "DetectOutdated": true,
+        "ValidateStandards": true
+    },
+    "Modes": {
+        "Routine": {
+            "Enabled": true,
+            "Schedule": "Daily 02:00 UTC"
+        },
+        "Trigger": {
+            "Enabled": true,
+            "Latency": "3s",
+            "Cooldown": "5min"
+        }
+    },
+    "Interfaces": {
+        "Archivar": true,
+        "Coder": true,
+        "MINTYcleaner": true,
+        "Log": true,
+        "Hive": true
+    }
+}

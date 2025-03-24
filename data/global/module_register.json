@@ -1,0 +1,10 @@
+{
+    "RegisteredModules": [
+        "global",
+        "M01_install",
+        "M02_systeminfo",
+        "M03_dummy",
+        "M99_hive"
+    ],
+    "LastUpdate": "2025-03-24 22:03:00"
+}

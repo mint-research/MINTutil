@@ -1,0 +1,18 @@
+{
+  "name": "global",
+  "description": "Globale Einstellungen und gemeinsame Ressourcen für alle Module. Enthält Konfigurationen, die modulübergreifend verwendet werden.",
+  "entry": "modules/global/global.ps1",
+  "config": [
+    "config/global/global.config.json"
+  ],
+  "data": [
+    "data/global/common_settings.json"
+  ],
+  "generates": [],
+  "ui": {
+    "type": "settings",
+    "dynamicFields": false,
+    "includes": ["global_settings"]
+  },
+  "preserve": true
+}

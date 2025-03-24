@@ -1,0 +1,47 @@
+[
+    {
+        "Id": "4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s",
+        "Title": "Implementierung Docker-Container-Verwaltung",
+        "Description": "Entwicklung einer Komponente zur Verwaltung von Docker-Containern",
+        "Category": "Feature",
+        "Priority": "High",
+        "RequiredCapabilities": [
+            "Docker",
+            "ContainerManagement",
+            "PowerShell"
+        ],
+        "Status": "New",
+        "CreatedAt": "2025-03-24T22:26:00.000Z",
+        "UpdatedAt": "2025-03-24T22:37:00.000Z"
+    },
+    {
+        "Id": "5e6f7g8h-9i0j-1k2l-3m4n-5o6p7q8r9s0t",
+        "Title": "Optimierung der Cache-Verwaltung",
+        "Description": "Verbesserung der Cache-Verwaltung für bessere Performance",
+        "Category": "Enhancement",
+        "Priority": "Medium",
+        "RequiredCapabilities": [
+            "CacheManagement",
+            "MemoryOptimization",
+            "Performance"
+        ],
+        "Status": "New",
+        "CreatedAt": "2025-03-24T22:26:00.000Z",
+        "UpdatedAt": "2025-03-24T22:37:00.000Z"
+    },
+    {
+        "Id": "6f7g8h9i-0j1k-2l3m-4n5o-6p7q8r9s0t1u",
+        "Title": "Fehlerbehandlung in Deployment-Prozessen",
+        "Description": "Verbesserung der Fehlerbehandlung in Deployment-Prozessen",
+        "Category": "Bugfix",
+        "Priority": "Critical",
+        "RequiredCapabilities": [
+            "ErrorHandling",
+            "Deployment",
+            "Logging"
+        ],
+        "Status": "New",
+        "CreatedAt": "2025-03-24T22:26:00.000Z",
+        "UpdatedAt": "2025-03-24T22:37:00.000Z"
+    }
+]

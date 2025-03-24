@@ -1,0 +1,48 @@
+{
+    "TestSettings": {
+        "DefaultTestPath": "tests",
+        "DefaultFilter": "*.Tests.ps1",
+        "Parallel": true,
+        "MaxParallelTests": 5,
+        "Timeout": 60
+    },
+    "CoverageSettings": {
+        "EnableCoverage": true,
+        "MinimumCoverage": 80,
+        "ExcludePaths": [
+            "tests",
+            "examples"
+        ],
+        "IncludeUntested": true
+    },
+    "ValidationSettings": {
+        "EnableValidation": true,
+        "Rules": [
+            "PSScriptAnalyzer"
+        ],
+        "Severity": "Warning",
+        "ExcludePaths": [
+            "tests",
+            "examples"
+        ]
+    },
+    "ErrorAnalysisSettings": {
+        "EnableErrorAnalysis": true,
+        "MaxErrors": 100,
+        "IncludeStackTrace": true,
+        "IncludeContext": true
+    },
+    "ReportSettings": {
+        "EnableReporting": true,
+        "ReportFormat": "HTML",
+        "IncludeDetails": true,
+        "IncludeTimestamp": true,
+        "IncludeEnvironment": true
+    },
+    "IntegrationSettings": {
+        "EnableHiveIntegration": true,
+        "EnableLoggerIntegration": true,
+        "EnableManagerIntegration": true,
+        "HiveUpdateInterval": 60
+    }
+}

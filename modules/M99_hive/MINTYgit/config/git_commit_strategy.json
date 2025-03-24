@@ -1,0 +1,183 @@
+{
+    "snapshot_types": {
+        "pretest": {
+            "description": "Sichert den aktuellen Zustand vor Testläufen, Debugging oder riskanten Eingriffen.",
+            "naming": "pretest-<yyyyMMdd>-<context>",
+            "branch": false,
+            "required": true
+        },
+        "posttest": {
+            "description": "Markiert den Zustand nach erfolgreichem Test und Optimierung. Commit-pflichtig.",
+            "naming": "posttest-<yyyyMMdd>-<context>",
+            "branch": false,
+            "required": true,
+            "requires_gitignore_and_readme": true
+        },
+        "checkpoint": {
+            "description": "Manueller Zwischenstand zur Absicherung.",
+            "naming": "checkpoint-<yyyyMMdd>-<context>",
+            "branch": false,
+            "required": false
+        },
+        "prerisk": {
+            "description": "Snapshot vor potenziell destruktiven oder großflächigen Änderungen.",
+            "naming": "prerisk-<yyyyMMdd>-<context>",
+            "branch": true,
+            "required": true
+        },
+        "session": {
+            "description": "Start oder Ende einer Coding-Session.",
+            "naming": "session-<yyyyMMdd>-<start|end>",
+            "branch": true,
+            "required": true
+        },
+        "stable": {
+            "description": "Snapshot eines getesteten, dokumentierten und abgeschlossenen Features.",
+            "naming": "stable-<yyyyMMdd>-<feature>",
+            "branch": true,
+            "required": false
+        }
+    },
+    "branch_types": {
+        "main": {
+            "description": "Produktionsstand. Nur getestete, reviewte und dokumentierte Änderungen.",
+            "write_protected": true
+        },
+        "dev": {
+            "description": "Laufende Entwicklung und Agenten-Eingriffe.",
+            "write_protected": false,
+            "silent_commits": true,
+            "auto_commit": true
+        },
+        "agent": {
+            "description": "Temporäre Agent-Branches pro Session oder Task.",
+            "naming": "agent/<yyyyMMdd>-<session>",
+            "write_protected": false
+        },
+        "review": {
+            "description": "Manuelle Review-Branches mit Snapshots zur Abnahme.",
+            "naming": "review/<yyyyMMdd>-<topic>",
+            "write_protected": false
+        },
+        "fallback": {
+            "description": "Rücksprungpunkte bei risikobehafteten Eingriffen.",
+            "naming": "fallback/<yyyyMMdd>-<reason>",
+            "write_protected": false
+        },
+        "stable": {
+            "description": "Branch für getestete Features vor Merge nach main.",
+            "naming": "stable/<yyyyMMdd>-<feature>",
+            "write_protected": false
+        },
+        "archive": {
+            "description": "Langzeitarchiv für verwaiste oder veraltete Änderungen.",
+            "naming": "archive/<yyyyMMdd>-<context>",
+            "write_protected": true
+        }
+    },
+    "change_doc_format": {
+        "structure": [
+            "@type",
+            "@scope",
+            "@status",
+            "@reason",
+            "@result",
+            "@review",
+            "@linked",
+            "@branch",
+            "@readme",
+            "@gitignore",
+            "@env"
+        ],
+        "required_fields": [
+            "@type",
+            "@scope",
+            "@reason"
+        ],
+        "posttest_required_fields": [
+            "@status",
+            "@review",
+            "@result",
+            "@readme",
+            "@gitignore"
+        ]
+    },
+    "commit_rules": {
+        "preconditions": [
+            "README.md must be updated and accurate",
+            ".gitignore must include new or ignored files",
+            "TEMP folder must be excluded in .gitignore",
+            "Change must be documented in CHANGELOG or changes/*.md",
+            "Only posttest-verified changes may be committed to dev or merged to main"
+        ]
+    },
+    "cleanup_rules": {
+        "micro": {
+            "keep_days": 1,
+            "auto_delete": true
+        },
+        "checkpoint": {
+            "keep_days": 3,
+            "auto_delete": true
+        },
+        "session": {
+            "keep_days": 7,
+            "auto_delete": true
+        },
+        "prerisk": {
+            "keep_until_merge": true,
+            "auto_delete_after": 14
+        },
+        "review": {
+            "delete_after_merge": true
+        },
+        "agent": {
+            "keep_days": 3,
+            "auto_delete": true
+        },
+        "stable": {
+            "keep_forever": true
+        },
+        "archive": {
+            "keep_forever": true
+        }
+    },
+    "dev_prod_flow": {
+        "workflow": [
+            "agent/* → dev",
+            "dev → stable/<feature>",
+            "stable/<feature> → main (post-review, post-test, post-doc)"
+        ],
+        "main_protection": true,
+        "dev_isolated": true,
+        "merge_rules": {
+            "to_main": [
+                "Change must be posttest-verified",
+                "README.md and .gitignore must be updated",
+                "TEMP folder must be excluded",
+                "ChangeDoc must be complete",
+                "Stable snapshot must exist"
+            ]
+        }
+    },
+    "env_handling": {
+        "required": true,
+        "rules": [
+            ".env-Dateien müssen in .gitignore enthalten sein",
+            ".env darf niemals committed, gesnapshotet oder in Branches übernommen werden",
+            "Falls Konfiguration dokumentiert werden muss → Beispieldatei nutzen",
+            "Beispiel-Dateiname: .env.example (keine sensitiven Inhalte)",
+            "Pfad/Struktur von .env-Dateien wird im README.md erklärt",
+            "Der Ordner \\TEMP\\ im Root muss ebenfalls ausgeschlossen werden"
+        ],
+        "gitignore_required_entries": [
+            ".env",
+            ".env.local",
+            ".env.*",
+            "*.env",
+            "/TEMP/",
+            "TEMP/"
+        ],
+        "readme_note": "Bitte eigene Umgebungsvariablen in .env eintragen. Beispiel siehe .env.example. Diese Datei darf nicht committed werden. Der Ordner TEMP dient nur der temporären Laufzeitnutzung und darf nicht versioniert werden."
+    }
+}

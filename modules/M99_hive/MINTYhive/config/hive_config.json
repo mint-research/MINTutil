@@ -1,0 +1,43 @@
+{
+    "Agents": [
+        "MINTYmanager",
+        "MINTYarchitect",
+        "MINTYcoder",
+        "MINTYtester",
+        "MINTYarchivar",
+        "MINTYcache",
+        "MINTYlogger",
+        "MINTYcleaner",
+        "MINTYupdater",
+        "MINTYgit"
+    ],
+    "Schedule": {
+        "Continuous": true,
+        "ReevaluationInterval": "5s",
+        "CoordinationWindow": "100ms",
+        "AdjustsOtherSchedules": true
+    },
+    "Interfaces": {
+        "AllAgents": true,
+        "Log": true,
+        "Manager": true,
+        "ExternalSystems": false
+    },
+    "CommunicationPriorities": {
+        "MINTYmanager": 1,
+        "MINTYarchitect": 2,
+        "MINTYcoder": 3,
+        "MINTYtester": 4,
+        "MINTYarchivar": 5,
+        "MINTYcache": 6,
+        "MINTYlogger": 7,
+        "MINTYcleaner": 8,
+        "MINTYupdater": 9,
+        "MINTYgit": 10
+    },
+    "CapabilityManagement": {
+        "ProactiveDevelopment": true,
+        "UserConfirmationRequired": true,
+        "AutoUpdateCapabilities": true
+    }
+}

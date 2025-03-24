@@ -1,0 +1,22 @@
+{
+    "CleanupRules": {
+        "RemoveEmptyLines": true,
+        "RemoveComments": false,
+        "RemoveWhitespace": true,
+        "RemoveDuplicates": true,
+        "RemoveObsolete": true
+    },
+    "Schedule": {
+        "Mode": "OnChange + WeeklySweep",
+        "WeeklySweep": "Sunday 03:00 UTC",
+        "TriggerWindow": "0s",
+        "Debounce": "60s"
+    },
+    "Interfaces": {
+        "Coder": true,
+        "Archivar": true,
+        "Log": true,
+        "Tester": true,
+        "Manager": true
+    }
+}

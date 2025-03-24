@@ -1,0 +1,49 @@
+{
+    "GenerationSettings": {
+        "TemplatesPath": "templates",
+        "DefaultLanguage": "PowerShell",
+        "IncludeComments": true,
+        "IncludeExamples": true,
+        "IncludeTests": true
+    },
+    "AnalysisSettings": {
+        "EnableAnalysis": true,
+        "Rules": [
+            "All"
+        ],
+        "Severity": "Warning",
+        "ExcludePaths": [
+            "tests",
+            "examples"
+        ]
+    },
+    "OptimizationSettings": {
+        "EnableOptimization": true,
+        "OptimizationLevel": "Medium",
+        "PreserveComments": true,
+        "PreserveFormatting": true
+    },
+    "RefactoringSettings": {
+        "EnableRefactoring": true,
+        "Operations": [
+            "ExtractMethod",
+            "RenameVariable",
+            "InlineVariable"
+        ],
+        "PreserveComments": true,
+        "PreserveFormatting": true
+    },
+    "DocumentationSettings": {
+        "EnableDocumentation": true,
+        "Format": "Markdown",
+        "IncludeExamples": true,
+        "IncludeParameters": true,
+        "IncludeReturns": true
+    },
+    "IntegrationSettings": {
+        "EnableHiveIntegration": true,
+        "EnableLoggerIntegration": true,
+        "EnableManagerIntegration": true,
+        "HiveUpdateInterval": 60
+    }
+}

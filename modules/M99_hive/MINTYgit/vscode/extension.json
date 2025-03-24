@@ -1,0 +1,251 @@
+{
+    "name": "mintygit",
+    "displayName": "MINTYgit",
+    "description": "VS Code-Integration für den MINTYgit-Agent",
+    "version": "0.1.0",
+    "publisher": "MINTYhive",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Other",
+        "SCM Providers"
+    ],
+    "activationEvents": [
+        "onCommand:mintygit.commit",
+        "onCommand:mintygit.push",
+        "onCommand:mintygit.pull",
+        "onCommand:mintygit.autoCommit",
+        "workspaceContains:.git"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "mintygit.commit",
+                "title": "MINTYgit: Commit"
+            },
+            {
+                "command": "mintygit.push",
+                "title": "MINTYgit: Push"
+            },
+            {
+                "command": "mintygit.pull",
+                "title": "MINTYgit: Pull"
+            },
+            {
+                "command": "mintygit.autoCommit",
+                "title": "MINTYgit: Auto-Commit"
+            },
+            {
+                "command": "mintygit.enableAutoCommit",
+                "title": "MINTYgit: Enable Auto-Commit"
+            },
+            {
+                "command": "mintygit.disableAutoCommit",
+                "title": "MINTYgit: Disable Auto-Commit"
+            },
+            {
+                "command": "mintygit.showHistory",
+                "title": "MINTYgit: Show History"
+            },
+            {
+                "command": "mintygit.createBranch",
+                "title": "MINTYgit: Create Branch"
+            },
+            {
+                "command": "mintygit.switchBranch",
+                "title": "MINTYgit: Switch Branch"
+            },
+            {
+                "command": "mintygit.mergeBranch",
+                "title": "MINTYgit: Merge Branch"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "mintygit.commit",
+                "key": "ctrl+alt+c",
+                "mac": "cmd+alt+c",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "mintygit.push",
+                "key": "ctrl+alt+p",
+                "mac": "cmd+alt+p",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "mintygit.pull",
+                "key": "ctrl+alt+l",
+                "mac": "cmd+alt+l",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "mintygit.autoCommit",
+                "key": "ctrl+alt+a",
+                "mac": "cmd+alt+a",
+                "when": "editorTextFocus"
+            }
+        ],
+        "configuration": {
+            "title": "MINTYgit",
+            "properties": {
+                "mintygit.enabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Aktiviert oder deaktiviert die MINTYgit-Erweiterung"
+                },
+                "mintygit.autoCommit": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Aktiviert oder deaktiviert automatische Commits"
+                },
+                "mintygit.commitOnSave": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Erstellt einen Commit bei jedem Speichern"
+                },
+                "mintygit.showNotifications": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Zeigt Benachrichtigungen an"
+                },
+                "mintygit.statusBarIntegration": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Zeigt Informationen in der Statusleiste an"
+                },
+                "mintygit.autoCommitInterval": {
+                    "type": "string",
+                    "default": "15m",
+                    "description": "Intervall für automatische Commits (z.B. '15m', '1h')"
+                },
+                "mintygit.minChangesForCommit": {
+                    "type": "number",
+                    "default": 3,
+                    "description": "Minimale Anzahl an Änderungen für einen automatischen Commit"
+                },
+                "mintygit.groupSimilarChanges": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Gruppiert ähnliche Änderungen in Commit-Nachrichten"
+                },
+                "mintygit.includeFileList": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Fügt eine Liste der geänderten Dateien in die Commit-Nachricht ein"
+                },
+                "mintygit.maxFilesInMessage": {
+                    "type": "number",
+                    "default": 5,
+                    "description": "Maximale Anzahl der Dateien in der Commit-Nachricht"
+                },
+                "mintygit.autoCommitDelay": {
+                    "type": "string",
+                    "default": "30s",
+                    "description": "Verzögerung für automatische Commits nach Dateiänderungen"
+                },
+                "mintygit.suggestCommitMessages": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Schlägt Commit-Nachrichten basierend auf Änderungen vor"
+                }
+            }
+        },
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "mintygit",
+                    "title": "MINTYgit",
+                    "icon": "resources/icon.svg"
+                }
+            ]
+        },
+        "views": {
+            "mintygit": [
+                {
+                    "id": "mintygitBranches",
+                    "name": "Branches"
+                },
+                {
+                    "id": "mintygitHistory",
+                    "name": "History"
+                },
+                {
+                    "id": "mintygitChanges",
+                    "name": "Changes"
+                },
+                {
+                    "id": "mintygitSettings",
+                    "name": "Settings"
+                }
+            ]
+        },
+        "menus": {
+            "view/title": [
+                {
+                    "command": "mintygit.createBranch",
+                    "when": "view == mintygitBranches",
+                    "group": "navigation"
+                },
+                {
+                    "command": "mintygit.commit",
+                    "when": "view == mintygitChanges",
+                    "group": "navigation"
+                }
+            ],
+            "view/item/context": [
+                {
+                    "command": "mintygit.switchBranch",
+                    "when": "view == mintygitBranches",
+                    "group": "inline"
+                },
+                {
+                    "command": "mintygit.mergeBranch",
+                    "when": "view == mintygitBranches",
+                    "group": "inline"
+                }
+            ],
+            "editor/context": [
+                {
+                    "command": "mintygit.commit",
+                    "group": "mintygit"
+                },
+                {
+                    "command": "mintygit.push",
+                    "group": "mintygit"
+                },
+                {
+                    "command": "mintygit.pull",
+                    "group": "mintygit"
+                },
+                {
+                    "command": "mintygit.autoCommit",
+                    "group": "mintygit"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.60.0",
+        "@types/glob": "^7.1.3",
+        "@types/mocha": "^8.2.2",
+        "@types/node": "14.x",
+        "eslint": "^7.27.0",
+        "@typescript-eslint/eslint-plugin": "^4.26.0",
+        "@typescript-eslint/parser": "^4.26.0",
+        "glob": "^7.1.7",
+        "mocha": "^8.4.0",
+        "typescript": "^4.3.2",
+        "vscode-test": "^1.5.2"
+    }
+}
