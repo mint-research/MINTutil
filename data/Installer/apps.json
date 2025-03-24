@@ -1,0 +1,55 @@
+[
+  {
+    "Name": "Firefox",
+    "Id": "Mozilla.Firefox",
+    "Info": {
+      "Text": "Open Source Webbrowser",
+      "Url": "https://www.mozilla.org/firefox/"
+    },
+    "Fields": [
+      {
+        "Label": "Installationspfad",
+        "Type": "text",
+        "Name": "path",
+        "Default": "C:\\Programme\\Firefox"
+      }
+    ],
+    "Remove": {
+      "Method": "winget",
+      "Id": "Mozilla.Firefox"
+    }
+  },
+  {
+    "Name": "VLC media player",
+    "Id": "VideoLAN.VLC",
+    "Info": {
+      "Text": "Media-Player mit vielen Formaten",
+      "Url": "https://www.videolan.org/vlc/"
+    },
+    "Fields": [],
+    "Remove": {
+      "Method": "winget",
+      "Id": "VideoLAN.VLC"
+    }
+  },
+  {
+    "Name": "7-Zip",
+    "Id": "7zip.7zip",
+    "Info": {
+      "Text": "Kompressionstools",
+      "Url": "https://www.7-zip.org/"
+    },
+    "Fields": [
+      {
+        "Label": "Installationspfad",
+        "Type": "text",
+        "Name": "path",
+        "Default": "C:\\Programme\\7-Zip"
+      }
+    ],
+    "Remove": {
+      "Method": "winget",
+      "Id": "7zip.7zip"
+    }
+  }
+]

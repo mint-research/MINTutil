@@ -1,0 +1,26 @@
+{
+  "name": "Installer",
+  "description": "Modul zur Softwareinstallation, Deinstallation und Konfiguration über Winget. Unterstützt Fortschrittsanzeige, Statusleiste und dynamische App-Felder.",
+  "entry": "modules/modul1/install.ps1",
+  "config": [
+    "config/modul1/output.json",
+    "config/global/global.config.json"
+  ],
+  "data": [
+    "data/modul1/apps.json"
+  ],
+  "generates": [
+    "config/modul1/output.json"
+  ],
+  "ui": {
+    "type": "tab",
+    "dynamicFields": true,
+    "includes": [
+      "actions",
+      "softwarelist",
+      "progressbar",
+      "statusbar"
+    ]
+  },
+  "preserve": true
+}

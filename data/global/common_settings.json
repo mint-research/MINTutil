@@ -1,0 +1,45 @@
+{
+  "application": {
+    "name": "MINTutil",
+    "version": "1.0.0",
+    "lastUpdate": "2025-03-24T13:53:50",
+    "language": "de-DE"
+  },
+  "environment": {
+    "computerName": "DESKTOP-ABC123",
+    "osVersion": "Windows 11 Pro",
+    "powershellVersion": "5.1",
+    "userDomain": "WORKGROUP",
+    "username": "Administrator"
+  },
+  "modules": {
+    "enabled": ["M01_installer", "M02_systeminfo", "M03_dummy"],
+    "startupModule": "M01_installer",
+    "updateModules": true
+  },
+  "ui": {
+    "theme": "dark",
+    "fontSize": "medium",
+    "windowSize": {
+      "width": 800,
+      "height": 600
+    },
+    "statusBarEnabled": true
+  },
+  "paths": {
+    "tempFolder": "%TEMP%\\MINTutil",
+    "logFolder": "%APPDATA%\\MINTutil\\logs",
+    "customScripts": "%DOCUMENTS%\\MINTutil\\scripts"
+  },
+  "logging": {
+    "enabled": true,
+    "level": "Info",
+    "maxLogSize": 10,
+    "maxLogFiles": 5
+  },
+  "updates": {
+    "checkForUpdates": true,
+    "updateChannel": "stable",
+    "lastUpdateCheck": "2025-03-22T10:15:32"
+  }
+}

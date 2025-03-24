@@ -1,0 +1,6 @@
+{
+  "label": "Installer",
+  "icon": "box-download",
+  "order": 1,
+  "enabled": true
+}

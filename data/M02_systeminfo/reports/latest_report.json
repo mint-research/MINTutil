@@ -1,0 +1,141 @@
+{
+  "reportType": "systemInfo",
+  "timestamp": "2025-03-24T13:55:00",
+  "generatedBy": "SystemInfo Module v1.0",
+  "system": {
+    "computerName": "DESKTOP-ABC123",
+    "operatingSystem": {
+      "name": "Microsoft Windows 11 Pro",
+      "version": "10.0.22621",
+      "build": "22621",
+      "architecture": "64-bit",
+      "installDate": "2024-08-15T09:24:32",
+      "lastBootTime": "2025-03-24T08:12:45"
+    },
+    "hardware": {
+      "processor": {
+        "name": "Intel(R) Core(TM) i7-11700K @ 3.60GHz",
+        "cores": 8,
+        "threads": 16,
+        "speed": "3600 MHz",
+        "utilization": 12.5
+      },
+      "memory": {
+        "totalGB": 32.0,
+        "usedGB": 8.4,
+        "freeGB": 23.6,
+        "percentUsed": 26.3
+      },
+      "storage": [
+        {
+          "drive": "C:",
+          "label": "System",
+          "totalGB": 512.0,
+          "usedGB": 187.5,
+          "freeGB": 324.5,
+          "percentUsed": 36.6,
+          "type": "SSD"
+        },
+        {
+          "drive": "D:",
+          "label": "Daten",
+          "totalGB": 2048.0,
+          "usedGB": 589.8,
+          "freeGB": 1458.2,
+          "percentUsed": 28.8,
+          "type": "HDD"
+        }
+      ],
+      "graphics": {
+        "name": "NVIDIA GeForce RTX 3070",
+        "driver": "531.41",
+        "memoryGB": 8
+      }
+    },
+    "network": {
+      "hostname": "DESKTOP-ABC123",
+      "adapters": [
+        {
+          "name": "Intel(R) Wi-Fi 6 AX201 160MHz",
+          "connectionId": "WLAN",
+          "macAddress": "AA:BB:CC:DD:EE:FF",
+          "ipAddresses": [
+            "192.168.1.100",
+            "fe80::1234:5678:abcd:ef01"
+          ],
+          "gateway": "192.168.1.1",
+          "dnsServers": [
+            "192.168.1.1",
+            "8.8.8.8"
+          ],
+          "status": "Connected"
+        }
+      ]
+    }
+  },
+  "performance": {
+    "cpu": {
+      "utilization": 12.5,
+      "temperature": 45.2,
+      "processes": 87
+    },
+    "memory": {
+      "totalGB": 32.0,
+      "usedGB": 8.4,
+      "percentUsed": 26.3,
+      "pageFileGB": 36.0
+    },
+    "disk": {
+      "readBytesPerSec": 2500000,
+      "writeBytesPerSec": 1200000,
+      "activeTimePercent": 3.2
+    },
+    "network": {
+      "receivedBytesPerSec": 250000,
+      "sentBytesPerSec": 120000,
+      "activeConnections": 24
+    }
+  },
+  "software": {
+    "installedApplications": 182,
+    "updates": {
+      "pending": 3,
+      "lastUpdated": "2025-03-20T14:25:12"
+    },
+    "recentlyInstalled": [
+      {
+        "name": "Visual Studio Code",
+        "version": "1.84.0",
+        "installDate": "2025-03-10T15:42:33"
+      },
+      {
+        "name": "Google Chrome",
+        "version": "118.0.5993.71",
+        "installDate": "2025-03-05T09:18:45"
+      }
+    ]
+  },
+  "security": {
+    "antivirusStatus": "Healthy",
+    "firewallStatus": "Active",
+    "lastFullScan": "2025-03-22T02:15:00",
+    "securityUpdates": "Current"
+  },
+  "recommendations": [
+    {
+      "type": "performance",
+      "level": "info",
+      "message": "System performance is within normal parameters."
+    },
+    {
+      "type": "security",
+      "level": "warning",
+      "message": "3 Windows updates are pending installation."
+    },
+    {
+      "type": "storage",
+      "level": "info",
+      "message": "All drives have sufficient free space."
+    }
+  ]
+}

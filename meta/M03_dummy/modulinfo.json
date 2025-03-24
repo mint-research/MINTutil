@@ -1,0 +1,21 @@
+{
+  "name": "M03_dummy",
+  "description": "Modul in Entwicklung mit Under Construction Status. Dieses Modul ist ein Platzhalter für ein künftiges Feature.",
+  "entry": "modules/M03_dummy/modul2.ps1",
+  "config": [
+    "config/M03_dummy/ui.xaml",
+    "config/global/global.config.json"
+  ],
+  "data": [
+    "data/M03_dummy/status.json"
+  ],
+  "generates": [
+    "data/M03_dummy/notifications.json"
+  ],
+  "ui": {
+    "type": "tab",
+    "dynamicFields": false,
+    "includes": ["underconstruction"]
+  },
+  "preserve": true
+}

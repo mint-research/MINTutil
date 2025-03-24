@@ -1,0 +1,22 @@
+{
+  "name": "M02_systeminfo",
+  "description": "Modul zur Anzeige und Analyse von Systeminformationen. Sammelt Daten zu Hardware, Software, Leistung und Netzwerk auf dem System.",
+  "entry": "modules/M02_systeminfo/systeminfo.ps1",
+  "config": [
+    "config/M02_systeminfo/display.json",
+    "config/global.config.json"
+  ],
+  "data": [
+    "data/M02_systeminfo/cache.json",
+    "data/M02_systeminfo/history.json"
+  ],
+  "generates": [
+    "data/M02_systeminfo/reports/latest_report.json"
+  ],
+  "ui": {
+    "type": "tab",
+    "dynamicFields": true,
+    "includes": ["system_summary", "detailed_info", "performance", "network"]
+  },
+  "preserve": true
+}
