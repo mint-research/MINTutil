@@ -1,0 +1,57 @@
+# PowerShell-spezifische Dateien
+*.ps1.log
+*.psm1.log
+*.psd1.log
+*.ps1.xml
+*.psm1.xml
+*.psd1.xml
+
+# Umgebungsvariablen
+.env
+.env.local
+.env.*
+*.env
+
+# Temporäre Dateien
+/TEMP/
+TEMP/
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# VS Code-spezifische Dateien
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/PSScriptAnalyzerSettings.psd1
+
+# Windows-spezifische Dateien
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Abhängigkeiten
+node_modules/
+packages/
+
+# Build-Ausgaben
+bin/
+obj/
+out/
+dist/
+build/
+
+# Andere
+.DS_Store
+*.zip
+*.tar.gz
