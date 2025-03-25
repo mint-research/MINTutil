@@ -1,6 +1,6 @@
 {
     "RepositorySettings": {
-        "DefaultBranch": "main",
+        "DefaultBranch": "dev",
         "RemoteUrl": "",
         "LocalPath": "",
         "AutoCommit": true,
